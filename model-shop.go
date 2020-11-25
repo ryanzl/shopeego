@@ -11,7 +11,7 @@ type GetShopInfoRequest struct {
 
 type GetShopInfoResponse struct {
 	// Shopee's unique identifier for a shop.
-	ShopID int64 `json:"shopid,omitempty"`
+	ShopID int64 `json:"shop_id,omitempty"`
 	// Name of the shop.
 	ShopName string `json:"shop_name,omitempty"`
 	// The two-digit code representing the country where the order was made.
