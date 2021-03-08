@@ -305,3 +305,15 @@ type MyIncomeResponse struct {
 	//
 	OrderIncome MyIncomeResponseOrderIncome `json:"order_income,omitempty"`
 }
+
+type PushMechanismOrderStatusUpdateResponse struct {
+	Code	int64 `json:"code,omitempty"`
+	ShopID 	int64 `json:"shop_id,omitempty"`
+	Data	PushMechanismOrderStatusUpdateData	`json:"data,omitempty"`
+}
+
+type PushMechanismOrderStatusUpdateData struct {
+	OrderSn	string `json:"ordersn,omitempty"`
+	Status 	string `json:"status,omitempty"`
+	UpdateTime int `json:"update_time,omitempty"`
+}
