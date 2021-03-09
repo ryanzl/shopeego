@@ -317,3 +317,14 @@ type PushMechanismOrderStatusUpdateData struct {
 	Status 	string `json:"status,omitempty"`
 	UpdateTime int `json:"update_time,omitempty"`
 }
+
+type PushMechanismTrackingNoResponse struct {
+	Code	int64 `json:"code,omitempty"`
+	ShopID 	int64 `json:"shop_id,omitempty"`
+	Data	PushMechanismTrackingNoData	`json:"data,omitempty"`
+}
+
+type PushMechanismTrackingNoData struct {
+	OrderSn	string `json:"ordersn,omitempty"`
+	TrackingNo 	string `json:"tracking_no,omitempty"`
+}
