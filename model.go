@@ -1309,13 +1309,13 @@ type GetOrderDetailsResponseOrder struct {
 	// This object contains detailed breakdown for the recipient address.
 	RecipientAddress GetOrderDetailsResponseOrderAddress `json:"recipient_address,omitempty"`
 	// The estimated shipping fee is an estimation calculated by Shopee based on specific logistics courier's standard.
-	EstimatedShippingFee float64 `json:"estimated_shipping_fee,omitempty,string"`
+	EstimatedShippingFee string `json:"estimated_shipping_fee,omitempty,string"`
 	// The actual shipping cost of the order if available from external logistics partners.
-	ActualShippingCost float64 `json:"actual_shipping_cost,omitempty,string"`
+	ActualShippingCost string `json:"actual_shipping_cost,omitempty,string"`
 	// The total amount paid by the buyer for the order. This amount includes the total sale price of items, shipping cost beared by buyer; and offset by Shopee promotions if applicable. This value will only return after the buyer has completed payment for the order.
 	TotalAmount float64 `json:"total_amount,omitempty,string"`
 	// The total amount that the seller is expected to receive for the order. This amount includes buyer paid order amount (total_amount), all forms of Shopee platform subsidy; and offset by any cost and commission incurred.
-	EscrowAmount float64 `json:"escrow_amount,omitempty,string"`
+	EscrowAmount string `json:"escrow_amount,omitempty,string"`
 	// Enumerated type that defines the current status of the order.
 	OrderStatus string `json:"order_status,omitempty"`
 	// The logistics service provider that the buyer selected for the order to deliver items.
@@ -1360,7 +1360,7 @@ type GetOrderDetailsResponseOrder struct {
 	// Use this field to get reason for buyer, seller, and system cancellation.
 	CancelReason string `json:"cancel_reason,omitempty"`
 	// Cross-border tax imposed by the Indonesian government on sellers.
-	EscrowTax float64 `json:"escrow_tax,omitempty,string"`
+	EscrowTax string `json:"escrow_tax,omitempty,string"`
 	// Use this filed to judge whether the actual_shipping_fee is confirmed.
 	IsActualShippingFeeConfirmed bool `json:"is_actual_shipping_fee_confirmed,omitempty"`
 	// Buyer's CPF number for taxation and invoice purposes. Only for Brazil order.
